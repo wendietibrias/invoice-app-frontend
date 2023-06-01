@@ -202,6 +202,7 @@ const Homepage = () => {
         
         if(data.status) {
             fetchInvoices();
+            setOpenModal(false);
         }
 
     } catch(err) {
