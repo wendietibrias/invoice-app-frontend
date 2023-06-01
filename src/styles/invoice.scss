@@ -1,0 +1,346 @@
+@import "./variabels/colors.scss";
+
+.invoice-detail {
+     width:100%;
+     min-height:100vh;
+     display:flex;
+     align-items:stretch;
+     justify-content:flex-start;
+     position:relative;
+
+      .main {
+        flex:1;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: column;
+
+         .detail-invoice-container {
+            width:70%;
+            margin:0 auto;
+             
+             .redirect__section {
+                display:flex;
+                align-items:center;
+                justify-content:flex-start;
+                color:$primary-color;
+                font-size:0.85rem;
+                font-weight:500;
+                column-gap:5px;
+
+                .redirect__section-icon {
+                     font-size:1.3rem;
+                     line-height:0;
+                }
+                
+             }
+
+             .detail-invoice-middle {
+                 background-color:$navigation-color;
+                 padding:1.2rem 1.5rem;
+                 border-radius:6px;
+                 margin:1rem 0;
+                 display:flex;
+                 align-items: center;
+                 justify-content:space-between;
+
+                  .detail-invoice-middle__left {
+                    color:#fff;
+                    display:flex;
+                    align-items:center;
+                    column-gap:15px;
+
+                     span {
+                        font-size:0.9rem;
+                     }
+
+                     button {
+                        width:80px;
+                        border:none;
+                        outline:none;
+                        padding:0.3rem 0.8rem;
+                        font-weight:600;
+                        border-radius:6px;
+
+                         &.paid {
+                          color: #33d69f;
+                          background-color: rgba(51, 214, 160, 0.1);
+                         }
+        
+                         &.pending {
+                          color: #ff8f00;
+                          background-color: rgba(255, 145, 0, 0.1);
+                         }
+        
+                         &.draft {
+                          color: #dfe3fa;
+                          background-color: rgba(223, 227, 250, 0.1);
+                         }
+                      }
+                  }
+
+                   .detail-invoice-middle__right {
+                     display:flex;
+                     column-gap:10px;
+                     align-items:center;   
+
+                      button {
+                        border-radius:100px;
+                        padding:0.6rem 1.2rem;
+                        color:#fff;
+                        border:none;
+                        outline:none;
+                        cursor:pointer;
+                        font-weight:500;
+
+                        &.edit-btn {
+                            background-color:$pending-color;
+                        }
+
+                        &.delete-btn {
+                            background-color:$error-color;
+                        }
+
+                        &.paid {
+                          color: #33d69f;
+                          background-color: rgba(51, 214, 160, 0.1);
+                        }
+
+                        &.pending {
+                          color: #ff8f00;
+                          background-color: rgba(255, 145, 0, 0.1);
+                        }
+
+                        &.draft {
+                          color: #dfe3fa;
+                          background-color: rgba(223, 227, 250, 0.1);
+                        }
+                      }
+                  }
+             }
+
+             .detail-invoice-bottom {
+              background-color:$navigation-color;
+              border-radius:6px;
+              padding:1.2rem 1.5rem;
+
+               .detail-invoice-bottom__header {
+                 display:flex;
+                 justify-content:space-between;
+                 align-items:center;
+                 color:#fff;
+
+
+                  .left-side {
+
+                    h1 {
+                      font-size:1.2rem;
+                    }
+
+                    h4 {
+                      font-weight:400;
+                      font-size:0.85rem;
+                      margin-top:0.6rem;
+                    }
+                  }
+
+                 .right-side {
+                   display:flex;
+                   flex-direction:column;
+                   align-items:flex-start;
+                   row-gap:2px;
+                   h5 {
+                     font-weight:400;
+                     font-size:0.75rem;
+                   }
+                 }
+               }
+
+               .detail-invoice-bottom__middle {
+                 width:76%;
+                  display:flex;
+                  align-items:flex-start;
+                  margin-top:2rem;
+                 color:#fff;
+                 justify-content:space-between;
+
+                  .left-side {
+                    display:flex;
+                    flex-direction: column;
+                    row-gap:35px;
+                      .payment-due {
+
+                         h4 {
+                           font-weight:400;
+                           font-size:0.74rem;
+
+                         }
+
+                        h2  {
+                          font-size:1rem;
+                          font-weight:600;
+                          margin-top:0.5rem;
+
+                        }
+                      }
+                      .invoice-date {
+
+                        h4 {
+                          font-weight:400;
+                          font-size:0.74rem;
+                        }
+
+                        h2  {
+                          font-size:1rem;
+                          font-weight:600;
+                          margin-top:0.5rem;
+
+                        }
+                      }
+                  }
+
+                  .center-side {
+                    h5 {
+                      font-size:0.7rem;
+                      font-weight:500;
+                    }
+
+                    h4 {
+                      font-weight:500;
+                      font-size:1rem;
+                      margin:0.7rem 0 1.2rem;
+                    }
+                      .address {
+                        display:flex;
+                        flex-direction:column;
+                        align-items:flex-start;
+                        row-gap:2px;
+                        h5 {
+                          font-weight:400;
+                          margin:0;
+                          font-size:0.7rem;
+                        }
+                      }
+                  }
+
+                 .right-side {
+                   h5 {
+                     font-size:0.7rem;
+                     font-weight:500;
+                   }
+
+                   h4 {
+                     font-weight:500;
+                     font-size:1rem;
+                     margin:0.7rem 0 1.2rem;
+                   }
+                 }
+
+               }
+
+               .detail-invoice-bottom__bottom {
+                  background-color:$navigation-color;
+                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                 border-radius:15px;
+                 overflow:hidden;
+                 margin-top:2rem;
+
+                 .items-container {
+                   color:#fff;
+                   padding:1rem 1.5rem;
+                   .items-container-table-tr {
+                     display:flex;
+                     align-items:center;
+                     justify-content:space-between;
+
+                      h5 {
+                        font-weight:500;
+                        font-size:0.8rem;
+
+                      }
+
+                      h5:nth-child(1) {
+                        width:70%;
+                      }
+
+                     h5:nth-child(2) {
+                       width:10%;
+                       text-align:right;
+                     }
+
+                     h5:nth-child(3) {
+                       text-align:right;
+                       width:10%;
+                     }
+
+                     h5:nth-child(4) {
+                       width:10%;
+                       text-align:right;
+
+                     }
+                   }
+
+                   .items-container-table-td  {
+                      margin-top:1rem;
+                     display:flex;
+                     flex-direction: column;
+                     row-gap:8px;
+
+                      .item {
+                         display:flex;
+                         align-items:center;
+                         justify-content:space-between;
+
+                        h5 {
+                          font-weight:500;
+                          font-size:0.8rem;
+                        }
+
+                        h5:nth-child(1) {
+                          width:70%;
+                        }
+
+                        h5:nth-child(2) {
+                          width:10%;
+                          text-align:right;
+                        }
+
+                        h5:nth-child(3) {
+                          text-align:right;
+                          width:10%;
+                        }
+
+                        h5:nth-child(4) {
+                          width:10%;
+                          text-align:right;
+
+                        }
+
+                      }
+                   }
+                 }
+
+                 .total-amount-container {
+                   width:100%;
+                   background-color:#101010;
+                   padding:2rem 1.2rem;
+                   display:flex;
+                   align-items:center;
+                   justify-content:space-between;
+                   color:#fff;
+
+                   h3 {
+                     font-weight:500;
+                     font-size:1rem;
+                   }
+
+                   h3:nth-child(2) {
+                     font-weight:700;
+                   }
+                 }
+               }
+
+             }
+         }
+      }
+}

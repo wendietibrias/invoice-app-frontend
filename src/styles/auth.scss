@@ -1,0 +1,173 @@
+@import "./variabels/colors.scss";
+@import "./mixins/general.scss";
+
+.form-control {
+  @include flex(column,flex-start ,center);
+  gap:0.7rem;
+  position:relative;
+
+  .form-required-error {
+    color:$error-color;
+    font-weight:500;
+    font-size:0.9rem;
+  }
+
+  .show-pass-button {
+    position:absolute;
+    top:42px;
+    right:10px;
+    font-size:1.2rem;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    outline:none;
+    color:#555;
+  }
+
+  label {
+    color:#fff;
+    font-size:0.9rem;
+  }
+
+  input {
+    width:100%;
+    padding:0.6rem 1rem;
+    border-radius:3px;
+    outline:none;
+    color:#101010;
+    border:none;
+  }
+}
+
+.auth-container {
+  @include flex(column,center,center);
+  min-height:100vh;
+}
+
+/* Login */
+
+ .login-container {
+   width:37vw;
+
+   @media screen and (max-width:991px) {
+     width:60vw;
+   }
+
+   @media screen and (max-width:576px) {
+     width:100%;
+     padding:1rem;
+   }
+
+
+   .login-container__title {
+       width:100%;
+      color:$primary-color;
+      @include flex(column ,center,center);
+
+      font-size:3rem;
+
+       .login-container__title-text {
+         text-align:center;
+         font-size:1.8rem;
+         margin-top:0.8rem;
+         text-transform:uppercase;
+       }
+    }
+
+   .login-container__form {
+     display:flex;
+     flex-direction:column;
+     row-gap:1rem;
+     margin-top:2rem;
+
+      .login-container__button {
+         padding:0.5rem 1rem;
+        font-size:1.1rem;
+        border:none;
+        margin-top:1.5rem;
+        width:100%;
+        border-radius:100px;
+        background-color:$primary-color;
+        color:#fff;
+        cursor:pointer;
+
+      }
+   }
+
+   .redirect__page {
+     color:#fff;
+     width:100%;
+     text-align:center;
+     font-weight:400;
+     font-size:0.92rem;
+     margin-top:1.2rem;
+
+      a {
+         color:$primary-color;
+        font-weight:600;
+      }
+   }
+ }
+
+/* Register */
+
+.register-container {
+  width:37vw;
+
+  @media screen and (max-width:991px) {
+     width:60vw;
+  }
+
+  @media screen and (max-width:576px) {
+      width:100%;
+      padding:1rem;
+  }
+
+   .register-container__title {
+     width:100%;
+     color:$primary-color;
+     @include flex(column ,center,center);
+
+     font-size:3rem;
+
+     .register-container__title-text {
+       text-align:center;
+       font-size:1.8rem;
+       margin-top:0.8rem;
+       text-transform:uppercase;
+     }
+   }
+
+  .register-container__form {
+    display:flex;
+    flex-direction:column;
+    row-gap:1rem;
+    margin-top:2rem;
+
+    .register-container__button {
+      padding:0.5rem 1rem;
+      font-size:1.1rem;
+      border:none;
+      margin-top:1.5rem;
+      width:100%;
+      border-radius:100px;
+      background-color:$primary-color;
+      color:#fff;
+      cursor:pointer;
+    }
+  }
+
+  .redirect__page {
+    color:#fff;
+    width:100%;
+    text-align:center;
+    font-weight:400;
+    font-size:0.92rem;
+    margin-top:1.2rem;
+
+    a {
+      color:$primary-color;
+      font-weight:600;
+    }
+  }
+}
